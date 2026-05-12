@@ -16,18 +16,30 @@ export default function Navbar() {
                 </div>
 
                 {/* Desktop Nav */}
-                <nav className="hidden md:flex gap-8 text-sm text-zinc-300">
+                <nav className="hidden md:flex items-center gap-8 text-sm text-zinc-300">
                     <a href="#about" className="hover:text-white transition">
                         About
                     </a>
+
                     <a href="#projects" className="hover:text-white transition">
                         Projects
                     </a>
+
                     <a href="#skills" className="hover:text-white transition">
                         Skills
                     </a>
+
                     <a href="#contact" className="hover:text-white transition">
                         Contact
+                    </a>
+
+                    <a
+                        href="/resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-md border border-green-500 px-4 py-2 text-green-400 transition hover:bg-green-500 hover:text-black"
+                    >
+                        Resume
                     </a>
                 </nav>
 
@@ -42,11 +54,30 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {open && (
-                <div className="md:hidden border-zinc-800 bg-black px-6 py-4 space-y-4 text-zinc-300">
-                    <a href="#about" className="block">About</a>
-                    <a href="#projects" className="block">Projects</a>
-                    <a href="#skills" className="block">Skills</a>
-                    <a href="#contact" className="block">Contact</a> 
+                <div className="md:hidden border-t border-zinc-800 bg-black px-6 py-6 space-y-5 text-zinc-300">
+                    <a href="#about" className="block">
+                    About
+                    </a>
+
+                    <a href="#projects" className="block">
+                    Projects
+                    </a>
+
+                    <a href="#skills" className="block">
+                    Skills
+                    </a>
+
+                    <a href="#contact" className="block">
+                    Contact
+                    </a>
+
+                    <a
+                    href="/resume.pdf"
+                    target="_blank"
+                    className="inline-block rounded-md border border-green-500 px-4 py-2 text-green-400"
+                    >
+                    Resume
+                    </a>
                 </div>
             )}
         </header>
